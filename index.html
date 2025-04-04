@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 문구</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🧃음료수 추천해드립미다🧃</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "데자와 드셈 맛은 보장못함",
+                "솔의눈 드셈 솔방울 맛임ㅇㅇ",
+                "맥콜 드셈 보리맛 콜라지만",
+                "코카콜라 드셈 이게 ㄹㅇ맛남",
+                "펩시콜라...으으",
+                "실론티 드셈 싸구려 홍차맛임",
+                "어린쥐 쥬스 드셈ㅋㅋ",
+                "2% 드셈 부족하면",
+                "환타 드셈 미란다보다 훨 나음",
+                "밀키스 드셈 우유에 사이다 탄맛임"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
